@@ -1,3 +1,3 @@
 const initWeb = require('./web');
 
-initWeb();
+initWeb(process.env.PORT);

@@ -1,10 +1,14 @@
 {
   "name": "title-search-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "A search page that you can input an URL and get the title back",
   "main": "index.js",
+  "engines": {
+    "node" : "12.9.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
