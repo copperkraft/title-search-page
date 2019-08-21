@@ -1,8 +1,8 @@
 const form = document.querySelector('.form');
-const titleInput = document.querySelector('.form__title-input');
+const titleInput = document.querySelector('#title');
 const searchResult = document.querySelector('.search-result');
 const searchError = document.querySelector('.search-error');
-const spinner = document.querySelector('.spinner');
+const spinner = document.querySelector('.spinner-border');
 
 const urlRegex = '^(?:http(s)?:\\/\\/)[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&\'\\(\\)\\*\\+,;=.]+$';
 
@@ -34,20 +34,20 @@ const setResult = (url, title) => {
 
   searchResultUrl.innerText = url;
   searchResultTitle.innerText = title;
-  searchResult.classList.remove('hidden');
+  searchResult.classList.remove('d-none');
 };
 
 const setError = (url) => {
   const searchErrorUrl = document.querySelector('.search-error__url');
   searchErrorUrl.innerText = url;
-  searchError.classList.remove('hidden');
+  searchError.classList.remove('d-none');
 };
 
 const submitHandler = async (event) => {
   event.preventDefault();
-  searchResult.classList.add('hidden');
-  searchError.classList.add('hidden');
-  spinner.classList.remove('hidden');
+  searchResult.classList.add('d-none');
+  searchError.classList.add('d-none');
+  spinner.classList.remove('d-none');
   const url = titleInput.value;
 
   try {
@@ -57,7 +57,7 @@ const submitHandler = async (event) => {
   } catch (e) {
     setError(url);
   } finally {
-    spinner.classList.add('hidden');
+    spinner.classList.add('d-none');
   }
 };
 

@@ -5,31 +5,45 @@
     <title>Title search</title>
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
-    <form class="form">
-        <label class="form__title-label">
-            url:
-            <input required class="form__title-input">
-        </label>
-    </form>
-    <div class="search-result hidden">
-        <p class="search-result__line">
-            searched url:
-            <span class="search-result__url"></span>
-        </p>
-        <p class="search-result__line">
-            title:
-            <span class="search-result__title"></span>
-        </p>
+    <div class="row">
+        <div class="col-6">
+            <h1>
+                Title search page
+            </h1>
+            <form class="form">
+                <label for="title">
+                    Url
+                </label>
+                <input id="title" class="form-control" required>
+                <small class="form-text text-muted">full url with protocol</small>
+            </form>
+        </div>
     </div>
-    <p class="search-error hidden">
-        Unable to get title for this url:
-        <span class="search-error__url"></span>
-    </p>
-    <div class="spinner hidden">
-        Loading...
+    <div class="row mt-3">
+        <div class="col-8">
+            <div class="search-result alert alert-success d-none">
+                <h3 class="search-result__line">
+                    searched url:
+                </h3>
+                <span class="search-result__url"></span>
+                <h3 class="search-result__line">
+                    title:
+                </h3>
+                <span class="search-result__title"></span>
+            </div>
+            <p class="search-error alert alert-warning d-none">
+                Unable to get title for this url:
+                <span class="search-error__url"></span>
+            </p>
+            <div class="spinner-border d-none"></div>
+        </div>
     </div>
 </div>
 </body>
