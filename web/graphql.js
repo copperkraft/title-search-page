@@ -1,5 +1,5 @@
 const graphqlHTTP = require('express-graphql');
-const externalTitleService = require('../services/external-title-service');
+const titleService = require('../services/title-service');
 const {buildSchema} = require('graphql');
 
 
@@ -11,7 +11,7 @@ const schema = buildSchema(`
 
 const root = {
   title: async ({url}) => {
-    return await externalTitleService.getTitle(url);
+    return await titleService.getByUrl(url);
   },
 };
 

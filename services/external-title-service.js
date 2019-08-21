@@ -3,7 +3,7 @@ const request = require('request-promise-native');
 const apiUri = 'http://webwrap-title.herokuapp.com/crawl.json?spider_name=scraptitle-netflix&start_requests=true&title_url=';
 
 module.exports = {
-  async getTitle(url) {
+  async getByUrl(url) {
     const options = {
       uri: `${apiUri}${url}`,
       json: true
