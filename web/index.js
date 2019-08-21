@@ -1,15 +1,14 @@
 const express = require('express');
+const initStatic = require('./static');
+const initGraphql = require('./graphql');
 
-module.exports = (port = 3000) => {
-    const app = express();
+module.exports = initWeb = (port = 3000) => {
+  const app = express();
 
-    app.use(express.static('public'));
+  initStatic(app);
+  initGraphql(app);
 
-    app.get('/api', function (req, res) {
-        res.send('Api: Hello World!');
-    });
-
-    app.listen(port, function () {
-        console.log(`app listening on port ${port}`);
-    });
+  app.listen(port, function () {
+    console.log(`app listening on port ${port}`);
+  });
 };

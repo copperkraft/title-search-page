@@ -1,0 +1,22 @@
+.container {
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.form {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.form__title-label {
+    font-size: 24px;
+}
+
+.form__title-input {
+    font-size: 24px;
+}
+
+.search-result {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+}

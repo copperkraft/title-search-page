@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title search</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>
-        Hello world!
-    </p>
+<div class="container">
+    <form class="form">
+        <label class="form__title-label">
+            url: <input class="form__title-input">
+        </label>
+    </form>
+    <div class="search-result">
+        <p class="search-result__line">
+            searched url:
+            <span class="search-result__url"></span>
+        </p>
+        <p class="search-result__line">
+            title:
+            <span class="search-result__title"></span>
+        </p>
+    </div>
+</div>
 </body>
 </html>

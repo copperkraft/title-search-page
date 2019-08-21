@@ -1,3 +1,3 @@
-const runWeb = require('./web');
+const initWeb = require('./web');
 
-runWeb();
+initWeb();
