@@ -2,21 +2,28 @@
     max-width: 900px;
     padding: 20px;
     margin: 0 auto;
-}
-
-.form {
+    font-size: 24px;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 .form__title-label {
     font-size: 24px;
+    display: flex;
 }
 
 .form__title-input {
     font-size: 24px;
+    width: 400px;
 }
 
-.search-result {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24px;
+.form__title-input:invalid {
+    border: 1px solid lightcoral;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-result__error {
+    color: lightcoral;
 }

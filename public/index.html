@@ -10,10 +10,11 @@
 <div class="container">
     <form class="form">
         <label class="form__title-label">
-            url: <input class="form__title-input">
+            url:
+            <input required class="form__title-input">
         </label>
     </form>
-    <div class="search-result">
+    <div class="search-result hidden">
         <p class="search-result__line">
             searched url:
             <span class="search-result__url"></span>
@@ -22,6 +23,13 @@
             title:
             <span class="search-result__title"></span>
         </p>
+    </div>
+    <p class="search-error hidden">
+        Unable to get title for this url:
+        <span class="search-error__url"></span>
+    </p>
+    <div class="spinner hidden">
+        Loading...
     </div>
 </div>
 </body>

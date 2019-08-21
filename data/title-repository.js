@@ -1,9 +1,7 @@
 const connection = require('./connection');
 
 
-const collection = connection.then(db => {
-  return db.collection('Title');
-});
+const collection = connection.then(db => db.collection('Title'));
 
 module.exports = {
   async save(url, title) {
