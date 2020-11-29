@@ -52,7 +52,6 @@ const submitHandler = async (event) => {
 
   try {
     const title = await fetchTitle(titleInput.value);
-
     setResult(url, title);
   } catch (e) {
     setError(url);
